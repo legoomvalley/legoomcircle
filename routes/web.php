@@ -14,9 +14,11 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('main.index');
 });
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
